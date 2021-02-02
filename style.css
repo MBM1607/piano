@@ -90,41 +90,35 @@ body {
     background-color: var(--button-color);
 }
 
-@media (min-width: 560px) {
+@media (max-width: 560px) {
 
     .white-keys .piano-key {
-        background-color: var(--button-color);
-        color: var(--background-color);
-        min-width: 75px;
-        min-height: 250px;
+        min-width: 50px;
+        min-height: 175px;
     }
 
     .black-keys .piano-key {
-        position: absolute;
-        top: 0;
-        background-color: var(--background-color);
-        color: var(--button-color);
-        min-width: 36px;
-        min-height: 150px;
+        min-width: 24px;
+        min-height: 100px;
     }
 
     #W {
-        left: 57px;
+        left: 38px;
     }
 
     #E {
-        left: 132px;
+        left: 88px;
     }
 
     #T {
-        left: 282px;
+        left: 188px;
     }
 
     #Y {
-        left: 357px;
+        left: 238px;
     }
 
     #U {
-        left: 432px;
+        left: 288px;
     }
 }
