@@ -4,13 +4,16 @@
     --border-color: #C21F40;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
     background-color: var(--background-color);
 }
 
@@ -23,6 +26,7 @@ body {
 }
 
 .black-keys {
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-flow: row nowrap;
@@ -36,20 +40,91 @@ body {
     align-items: center;
     font-size: 1.25em;
     font-family: "Roboto Slab", serif;
+    border: 2px double var(--border-color);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.6s;
 }
 
 .white-keys .piano-key {
     background-color: var(--button-color);
     color: var(--background-color);
-    border: 2px solid var(--border-color);
     min-width: 75px;
     min-height: 250px;
 }
 
 .black-keys .piano-key {
+    position: absolute;
+    top: 0;
     background-color: var(--background-color);
     color: var(--button-color);
-    border: 2px solid var(--border-color);
-    min-width: 35px;
+    min-width: 36px;
     min-height: 150px;
+}
+
+#W {
+    left: 57px;
+}
+
+#E {
+    left: 132px;
+}
+
+#T {
+    left: 282px;
+}
+
+#Y {
+    left: 357px;
+}
+
+#U {
+    left: 432px;
+}
+
+.white-keys .piano-key.pressed {
+    background-color: var(--background-color);
+}
+
+.black-keys .piano-key.pressed {
+    background-color: var(--button-color);
+}
+
+@media (min-width: 560px) {
+
+    .white-keys .piano-key {
+        background-color: var(--button-color);
+        color: var(--background-color);
+        min-width: 75px;
+        min-height: 250px;
+    }
+
+    .black-keys .piano-key {
+        position: absolute;
+        top: 0;
+        background-color: var(--background-color);
+        color: var(--button-color);
+        min-width: 36px;
+        min-height: 150px;
+    }
+
+    #W {
+        left: 57px;
+    }
+
+    #E {
+        left: 132px;
+    }
+
+    #T {
+        left: 282px;
+    }
+
+    #Y {
+        left: 357px;
+    }
+
+    #U {
+        left: 432px;
+    }
 }
