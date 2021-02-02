@@ -2,20 +2,24 @@
 document.addEventListener("keypress", (e) => {
     const key = e.key.toUpperCase();
     if ("ASDFGHJWETYU".includes(key)) {
-        let audio = new Audio(`audio/${key}.mp3`);
-        audio.play().then(() => {
-            blink(document.getElementById(key))
-        });
+        pianoButtonPress(document.getElementById(key))
     }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".piano-key").forEach((key) => {
        key.addEventListener("click", () => {
-           blink(key)
+           pianoButtonPress(key)
        })
     });
 });
+
+function pianoButtonPress(key) {
+    let audio = new Audio(`audio/${key.id}.mp3`);
+    audio.play().then(() => {
+        blink(key)
+    });
+}
 
 function blink(key) {
     key.classList.add("pressed");
